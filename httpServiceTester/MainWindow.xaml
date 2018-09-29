@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:httpServiceTester"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="httpServiceTester Lite" Height="757.83" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="26*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="responseTextBox" HorizontalAlignment="Left" Height="214" Margin="10,195,0,0" TextWrapping="Wrap" Text="Response" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="2" GotFocus="cleartxtbox"/>
+        <TextBox x:Name="addressTextBox" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="http address" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="2" GotFocus="cleartxtbox"/>
+        <RadioButton x:Name="getRadioButton" Content="GET" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="postRadioButton" Content="POST" HorizontalAlignment="Left" Margin="79,38,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="putRadioButton" Content="PUT" HorizontalAlignment="Left" Margin="149,38,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="contentTextBox" HorizontalAlignment="Left" Height="63" Margin="10,58,0,0" TextWrapping="Wrap" Text="Content" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="2" GotFocus="cleartxtbox"/>
+        <Button x:Name="buttonConnect" Content="Connect" HorizontalAlignment="Left" Height="24" Margin="10,126,0,0" VerticalAlignment="Top" Width="101" Click="buttonConnect_Click"/>
+        <WebBrowser x:Name="responseWebBrowser" HorizontalAlignment="Left" Height="273" Margin="10,444,0,0" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="2"/>
+        <Label Content="HTTP RESPONSE PREVIEW" HorizontalAlignment="Left" Height="30" Margin="10,414,0,0" VerticalAlignment="Top" Width="179" Grid.ColumnSpan="2"/>
+        <Label Content="RESPONSE CODE" HorizontalAlignment="Left" Height="30" Margin="10,162,0,0" VerticalAlignment="Top" Width="179" Grid.ColumnSpan="2"/>
+
     </Grid>
 </Window>
